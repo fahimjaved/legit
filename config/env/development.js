@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://fahimnew:newTesting12@ec2-35-160-199-169.us-west-2.compute.amazonaws.com:27017/legit',
+  db: 'mongodb://fahimnew:newTesting12@ec2-35-164-251-30.us-west-2.compute.amazonaws.com:27017/legit',
   /**
    * Database options that will be passed directly to mongoose.connect
    * Below are some examples.
