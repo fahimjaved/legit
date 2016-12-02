@@ -1,0 +1,40 @@
+<section data-ng-controller="CompaniesController" data-ng-init="findOne()">
+  
+  <table class="table-striped table-bordered">
+    <thead>
+      <tr>
+        
+        <th>Comapny Name</th>
+        <th>Owner</th>
+        <th>City</th>
+        <th>Office</th>
+        <th>Houses</th>
+        <th>Trade</th>
+        <th>Leasable Area</th>
+        <th>Other</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>{{company.cname}}</td>
+        <td>{{company.owner}}</td>
+        <td>{{company.city}}</td>
+        <td>{{company.office}}</td>
+        <td>{{company.house}}</td>
+        <td>{{company.trade}}</td>
+        <td>{{company.garea}}</td>
+        <td>{{company.other}}</td>
+        <td><div data-ng-if="hasAuthorization(company)">
+    <a class="btn" href="/#!/companies/{{company._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn" data-ng-click="remove(company);">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

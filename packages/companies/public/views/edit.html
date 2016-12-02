@@ -1,0 +1,82 @@
+<section data-ng-controller="CompaniesController" data-ng-init="findOne()">
+  <form name="companyForm" class="form-horizontal col-md-6" role="form" data-ng-submit="update(companyForm.$valid)" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.cname.$invalid }">
+      <label mean-token="'create-cname'" class="col-md-3 control-label">Comapny Name</label>
+      <div class="col-md-9">
+        <input name="cname" type="text" class="form-control" data-ng-model="company.cname" id="cname" placeholder="Comapny Name" required>
+        <div ng-show="submitted && companyForm.cname.$invalid" class="help-block">
+          <p ng-show="companyForm.cname.$error.required">Comapny Name is required</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.city.$invalid }">
+      <label mean-token="'create-city'" for="city" class="col-md-3 control-label">City</label>
+      <div class="col-md-9">
+        <input name="city" type="text" class="form-control" data-ng-model="company.city" id="city" placeholder="City" required>
+        <div ng-show="submitted && companyForm.city.$invalid" class="help-block">
+          <p ng-show="companyForm.city.$error.required">City is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.owner.$invalid }">
+      <label mean-token="'create-owner'" for="owner" class="col-md-3 control-label">Owner</label>
+      <div class="col-md-9">
+        <input name="owner" type="text" class="form-control" data-ng-model="company.owner" id="owner" placeholder="Owner" required>
+        <div ng-show="submitted && companyForm.owner.$invalid" class="help-block">
+          <p ng-show="companyForm.owner.$error.required">Owner is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.office.$invalid }">
+      <label mean-token="'create-office'" for="office" class="col-md-3 control-label">Office</label>
+      <div class="col-md-9">
+        <input name="office" type="text" class="form-control" data-ng-model="company.office" id="office" placeholder="Office">
+        <div ng-show="submitted && companyForm.office.$invalid" class="help-block">
+          <p ng-show="companyForm.office.$error.required">Office is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.house.$invalid }">
+      <label mean-token="'create-house'" for="house" class="col-md-3 control-label">Houses</label>
+      <div class="col-md-9">
+        <input name="house" type="text" class="form-control" data-ng-model="company.house" id="house" placeholder="Houses">
+        <div ng-show="submitted && companyForm.house.$invalid" class="help-block">
+          <p ng-show="companyForm.house.$error.required">Houses is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.trade.$invalid }">
+      <label mean-token="'create-trade'" for="trade" class="col-md-3 control-label">Trade</label>
+      <div class="col-md-9">
+        <input name="trade" type="text" class="form-control" data-ng-model="company.trade" id="trade" placeholder="Trade">
+        <div ng-show="submitted && companyForm.trade.$invalid" class="help-block">
+          <p ng-show="companyForm.trade.$error.required">Trade is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.garea.$invalid }">
+      <label mean-token="'create-garea'" for="garea" class="col-md-3 control-label">Gross Leasable Area</label>
+      <div class="col-md-9">
+        <input name="garea" type="text" class="form-control" data-ng-model="company.garea" id="garea" placeholder="Gross Leasable Area" >
+        <div ng-show="submitted && companyForm.garea.$invalid" class="help-block">
+          <p ng-show="companyForm.garea.$error.required">Gross Leasable Area is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.other.$invalid }">
+      <label mean-token="'create-other'" for="other" class="col-md-3 control-label">Other</label>
+      <div class="col-md-9">
+        <input name="other" type="text" class="form-control" data-ng-model="company.other" id="other" placeholder="Other" >
+        <div ng-show="submitted && companyForm.other.$invalid" class="help-block">
+          <p ng-show="companyForm.other.$error.required">Other is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <button mean-token="'edit-submit'" type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</section>
