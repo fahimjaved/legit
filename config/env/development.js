@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://' + process.env.OPENSHIFT_MONGODB_DB_USERNAME + ':' + process.env.OPENSHIFT_MONGODB_DB_PASSWORD + '@' + process.env.OPENSHIFT_MONGODB_DB_HOST + ':' + process.env.OPENSHIFT_MONGODB_DB_PORT + '/' + process.env.OPENSHIFT_APP_NAME,
+  db: 'mongodb://fahimnew:newTesting12@ec2-35-160-199-169.us-west-2.compute.amazonaws.com:27017/legit',
   /**
    * Database options that will be passed directly to mongoose.connect
    * Below are some examples.
@@ -9,7 +9,7 @@ module.exports = {
    * and http://mongoosejs.com/docs/connections.html for more information
    */
   http: {
-	port: process.env.OPENSHIFT_NODEJS_PORT,
+	port: 3000,
   },
   hostname: process.env.OPENSHIFT_NODEJS_IP,
   dbOptions: {
